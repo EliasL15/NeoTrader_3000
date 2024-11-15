@@ -12,6 +12,8 @@
     background-size: cover;
     font-family: 'Futuristic', Arial, sans-serif;
     color: #fff;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
   }
   
   h1, h2 {
