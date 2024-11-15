@@ -6,7 +6,7 @@ body {
   background-size: cover;
   font-family: 'Orbitron', sans-serif;
   color: #fff;
-  overflow-x: hidden; /* Only horizontal overflow hidden */
+  overflow-x: hidden;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -27,8 +27,13 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Typography */
@@ -37,7 +42,7 @@ h1 {
   margin-bottom: clamp(15px, 2vw, 20px);
   padding: clamp(10px, 2vw, 20px);
   color: #00ffea;
-  text-shadow: 
+  text-shadow:
     0 0 8px rgba(0, 255, 234, 0.8),
     0 0 15px rgba(0, 255, 234, 0.5);
 }
@@ -53,12 +58,13 @@ h1 {
 }
 
 /* List Styles */
-ul, ol {
+ul,
+ol {
   /* Layout */
   max-width: min(600px, 85vw);
   margin: clamp(10px, 1.5vw, 15px) auto;
   padding: clamp(5px, 1vw, 10px) clamp(15px, 2vw, 20px);
-  
+
   /* Typography */
   font-size: clamp(0.9rem, 1.2vw, 1rem);
   text-align: left;
@@ -66,14 +72,16 @@ ul, ol {
 }
 
 /* List Items */
-ul li, ol li {
+ul li,
+ol li {
   padding: clamp(5px, 0.8vw, 8px) 0;
   margin: clamp(3px, 0.5vw, 5px) 0;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* Game Overview and How to Play sections */
-#game-overview, #how-to-play {
+#game-overview,
+#how-to-play {
   width: 100%;
   padding: clamp(8px, 1.2vw, 12px);
   margin: clamp(10px, 1.5vw, 15px) 0;
@@ -85,34 +93,40 @@ ol::-webkit-scrollbar {
   width: 8px;
 }
 
-ul::-webkit-scrollbar-track, ol::-webkit-scrollbar-track {
+ul::-webkit-scrollbar-track,
+ol::-webkit-scrollbar-track {
   background: rgba(0, 255, 234, 0.1);
   border-radius: 4px;
 }
 
-ul::-webkit-scrollbar-thumb, ol::-webkit-scrollbar-thumb {
+ul::-webkit-scrollbar-thumb,
+ol::-webkit-scrollbar-thumb {
   background: rgba(0, 255, 234, 0.4);
   border-radius: 4px;
 }
 
-ul::-webkit-scrollbar-thumb:hover, ol::-webkit-scrollbar-thumb:hover {
+ul::-webkit-scrollbar-thumb:hover,
+ol::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 255, 234, 0.6);
 }
 
-ul li, ol li {
+ul li,
+ol li {
   padding: clamp(5px, 0.8vw, 8px) 0;
   margin: clamp(3px, 0.5vw, 5px) 0;
   transition: transform 0.2s ease, color 0.2s ease;
   cursor: pointer;
 }
 
-ul li:hover, ol li:hover {
+ul li:hover,
+ol li:hover {
   transform: translateX(10px);
   color: #00ffea;
   text-shadow: 0 0 8px rgba(0, 255, 234, 0.6);
 }
 
-#rules, #instructions {
+#rules,
+#instructions {
   background: rgba(0, 0, 0, 0.6);
   padding: 10px 20px;
   border-radius: 8px;
@@ -181,6 +195,7 @@ footer p {
 
 /* Responsive Adjustments */
 @media (max-aspect-ratio: 3/4) and (max-width: 768px) {
+
   /* For narrower, taller screens (e.g., portrait tablets or phones) */
   h1 {
     font-size: 2.8em;
@@ -190,7 +205,8 @@ footer p {
     font-size: 1em;
   }
 
-  ul, ol {
+  ul,
+  ol {
     font-size: 0.95em;
   }
 
@@ -210,6 +226,7 @@ footer p {
 }
 
 @media (max-aspect-ratio: 4/3) and (max-width: 768px) {
+
   /* For wider, shorter screens (e.g., landscape tablets or small laptops) */
   h1 {
     font-size: 3em;
@@ -219,7 +236,8 @@ footer p {
     font-size: 1.1em;
   }
 
-  ul, ol {
+  ul,
+  ol {
     font-size: 1em;
   }
 
@@ -239,6 +257,7 @@ footer p {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
   /* For medium to larger screens like tablets in landscape or smaller laptops */
   h1 {
     font-size: 3.2em;
@@ -248,7 +267,8 @@ footer p {
     font-size: 1.15em;
   }
 
-  ul, ol {
+  ul,
+  ol {
     font-size: 1em;
   }
 
@@ -268,6 +288,7 @@ footer p {
 }
 
 @media (min-width: 1025px) {
+
   /* For large screens and desktops */
   h1 {
     font-size: 3.5em;
@@ -277,7 +298,8 @@ footer p {
     font-size: 1.2em;
   }
 
-  ul, ol {
+  ul,
+  ol {
     font-size: 1.1em;
   }
 

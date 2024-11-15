@@ -3,13 +3,13 @@ let balance = 10000;
 let portfolio = {};
 let assets = [];
 let selectedAsset = null;
-let gameDuration = 3 * 60 * 1000; // 5 minutes
+let gameDuration = 3 * 60 * 1000;
 let gameTimer;
 let priceUpdateInterval;
 let marketEventInterval;
 let newStockInterval;
 let achievementsUnlocked = [];
-let priceHistory = {}; // For recording price history
+let priceHistory = {};
 let chartUpdateInterval;
 let selectedSymbolForChart = null;
 
@@ -30,7 +30,6 @@ const insiderInfoMessages = [
   { symbol: 'ZEN', message: 'Whispers indicate legal troubles ahead for Zenith Ltd.', effect: 'negative' },
   { symbol: 'CRX', message: 'CyberX might secure a government contract soon.', effect: 'positive' },
   { symbol: 'ALT', message: 'Altair Systems facing supply chain issues.', effect: 'negative' },
-  // Add messages for new stocks
 ];
 
 // Initialize Game
@@ -177,9 +176,6 @@ function updateBalance() {
 }
 
 // Update Portfolio Table
-// ... [Other parts of your code remain unchanged]
-
-// Update Portfolio Table
 function updatePortfolioTable() {
   const table = document.getElementById('portfolio-table');
   table.innerHTML = `
@@ -229,8 +225,6 @@ function sellAllAsset(symbol) {
   }
 }
 
-// ... [Rest of your code remains unchanged]
-
 
 // Update Portfolio Value
 function updatePortfolioValue() {
@@ -242,7 +236,6 @@ function updatePortfolioValue() {
   document.getElementById('portfolio-value')
     .textContent = totalValue.toFixed(2);
 
-  // Check for achievements
   checkAchievements();
 }
 
@@ -452,7 +445,7 @@ function showPriceGraph(symbol) {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false, // Allows the chart to fill the container
+      maintainAspectRatio: false,
       scales: {
         x: {
           title: {
@@ -547,7 +540,7 @@ function startChartUpdates(symbol) {
   }, 1000); // Update every second
 }
 
-// Update Chart Data (if using the alternative method)
+// Update Chart Data 
 function updateChartData(symbol) {
   if (window.priceChart) {
     const prices = priceHistory[symbol];
@@ -641,7 +634,6 @@ function checkAchievements() {
     achievementsUnlocked.push('Market Master');
     showStoryMessage('🏆 Achievement Unlocked: Market Master! Net worth exceeded $15,000.');
   }
-  // Add more achievements as desired
 }
 
 // Sell All Shares of an Asset

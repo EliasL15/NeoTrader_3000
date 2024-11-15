@@ -127,22 +127,22 @@
 .orbitron-title {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700; /* Bold for titles */
-  font-size: 2.5em; /* Adjust size for visibility */
+  font-weight: 700;
+  font-size: 2.5em;
 }
 
 .orbitron-header {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 900; /* Extra bold for headers */
-  font-size: 2em; /* Slightly smaller than title */
+  font-weight: 900;
+  font-size: 2em;
 }
 
 .orbitron-body {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400; /* Regular for body text */
-  font-size: 1em; /* Standard size */
+  font-weight: 400;
+  font-size: 1em;
 }
 
 /* Button Styling */
@@ -171,7 +171,7 @@ button:hover {
   padding: 20px;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none; /* Initially hidden */
+  display: none;
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -185,8 +185,8 @@ button:hover {
   background-color: #111;
   padding: 20px;
   border-radius: 10px;
-  width: 90%; /* Adjust as needed */
-  max-width: 1200px; /* Optional */
+  width: 90%;
+  max-width: 1200px;
   max-height: 90%;
   overflow: auto;
   display: flex;
@@ -223,7 +223,7 @@ input[type="number"] {
   font-family: 'Orbitron', sans-serif;
   font-size: 1em;
   text-align: center;
-  padding: 5px 10px; /* Extra padding for custom arrows */
+  padding: 5px 10px;
   margin-right: 10px;
   box-shadow: 0 0 8px rgba(0, 255, 234, 0.4);
   outline: none;
