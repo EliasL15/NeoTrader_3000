@@ -1,0 +1,6 @@
+[
+    { "name": "Stock A", "price": 100, "category": "stocks" },
+    { "name": "Stock B", "price": 50, "category": "stocks" },
+    { "name": "Crypto C", "price": 200, "category": "crypto" }
+  ]
+  

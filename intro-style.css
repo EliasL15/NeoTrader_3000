@@ -1,0 +1,297 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('assets/images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  overflow-x: hidden; /* Only horizontal overflow hidden */
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Layout & Container Styles */
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: min(800px, 90vw);
+  margin: 0 auto;
+  padding: clamp(10px, 1.5vw, 15px);
+  text-align: center;
+  min-height: 100vh;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Typography */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: clamp(15px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
+  color: #00ffea;
+  text-shadow: 
+    0 0 8px rgba(0, 255, 234, 0.8),
+    0 0 15px rgba(0, 255, 234, 0.5);
+}
+
+#intro-text p {
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+  line-height: 1.4;
+  max-width: min(700px, 85vw);
+  margin: clamp(10px, 1.5vw, 15px) auto;
+  padding: clamp(8px, 1vw, 12px);
+  color: #00ffea;
+  text-shadow: 0 0 5px rgba(0, 255, 234, 0.6);
+}
+
+/* List Styles */
+ul, ol {
+  /* Layout */
+  max-width: min(600px, 85vw);
+  margin: clamp(10px, 1.5vw, 15px) auto;
+  padding: clamp(5px, 1vw, 10px) clamp(15px, 2vw, 20px);
+  
+  /* Typography */
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* List Items */
+ul li, ol li {
+  padding: clamp(5px, 0.8vw, 8px) 0;
+  margin: clamp(3px, 0.5vw, 5px) 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Game Overview and How to Play sections */
+#game-overview, #how-to-play {
+  width: 100%;
+  padding: clamp(8px, 1.2vw, 12px);
+  margin: clamp(10px, 1.5vw, 15px) 0;
+}
+
+/* Scrollbar Styling */
+ul::-webkit-scrollbar,
+ol::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-track, ol::-webkit-scrollbar-track {
+  background: rgba(0, 255, 234, 0.1);
+  border-radius: 4px;
+}
+
+ul::-webkit-scrollbar-thumb, ol::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 234, 0.4);
+  border-radius: 4px;
+}
+
+ul::-webkit-scrollbar-thumb:hover, ol::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 234, 0.6);
+}
+
+ul li, ol li {
+  padding: clamp(5px, 0.8vw, 8px) 0;
+  margin: clamp(3px, 0.5vw, 5px) 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+ul li:hover, ol li:hover {
+  transform: translateX(10px);
+  color: #00ffea;
+  text-shadow: 0 0 8px rgba(0, 255, 234, 0.6);
+}
+
+#rules, #instructions {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 234, 0.4);
+}
+
+/* Button Styling */
+button {
+  background-color: #00ffea;
+  color: #000;
+  font-size: 1.2em;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 234, 0.5);
+}
+
+button:hover {
+  background-color: #00b8a9;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.7), 0 0 20px rgba(0, 255, 234, 0.5);
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+footer h2 {
+  margin-bottom: 8px;
+  font-size: 1.5em;
+  color: #00ffea;
+  text-shadow: 0 0 5px rgba(0, 255, 234, 0.8);
+}
+
+#links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.link-icon {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 255, 234, 0.4);
+}
+
+.link-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0, 255, 234, 0.6), 0 0 18px rgba(0, 255, 234, 0.4);
+}
+
+footer p {
+  font-size: 1em;
+  color: #aaa;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-aspect-ratio: 3/4) and (max-width: 768px) {
+  /* For narrower, taller screens (e.g., portrait tablets or phones) */
+  h1 {
+    font-size: 2.8em;
+  }
+
+  #intro-text p {
+    font-size: 1em;
+  }
+
+  ul, ol {
+    font-size: 0.95em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px 25px;
+  }
+
+  footer h2 {
+    font-size: 1.2em;
+  }
+
+  .link-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-aspect-ratio: 4/3) and (max-width: 768px) {
+  /* For wider, shorter screens (e.g., landscape tablets or small laptops) */
+  h1 {
+    font-size: 3em;
+  }
+
+  #intro-text p {
+    font-size: 1.1em;
+  }
+
+  ul, ol {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 1.1em;
+    padding: 12px 28px;
+  }
+
+  footer h2 {
+    font-size: 1.3em;
+  }
+
+  .link-icon {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* For medium to larger screens like tablets in landscape or smaller laptops */
+  h1 {
+    font-size: 3.2em;
+  }
+
+  #intro-text p {
+    font-size: 1.15em;
+  }
+
+  ul, ol {
+    font-size: 1em;
+  }
+
+  button {
+    font-size: 1.15em;
+    padding: 12px 28px;
+  }
+
+  footer h2 {
+    font-size: 1.4em;
+  }
+
+  .link-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* For large screens and desktops */
+  h1 {
+    font-size: 3.5em;
+  }
+
+  #intro-text p {
+    font-size: 1.2em;
+  }
+
+  ul, ol {
+    font-size: 1.1em;
+  }
+
+  button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+  }
+
+  footer h2 {
+    font-size: 1.5em;
+  }
+
+  .link-icon {
+    width: 65px;
+    height: 65px;
+  }
+}

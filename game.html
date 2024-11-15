@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NeoTrader 3000 - Game</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Orbitron Font Integration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Game Interface -->
+    <div id="game" class="visible">
+        <header>
+            <h1 class="orbitron-header">NeoTrader Dashboard</h1>
+            <div class="stats">
+                <p class="orbitron-body">Balance: $<span id="balance">10000</span></p>
+                <p class="orbitron-body">Portfolio Value: $<span id="portfolio-value">0</span></p>
+            </div>
+        </header>
+
+        <!-- Market Section -->
+        <section id="market">
+            <h2 class="orbitron-header">Market Watch</h2>
+            <table id="market-table" class="orbitron-body">
+                <!-- Populated dynamically -->
+            </table>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2 class="orbitron-header">Your Portfolio</h2>
+            <table id="portfolio-table" class="orbitron-body">
+                <!-- Populated dynamically -->
+            </table>
+        </section>
+    </div>
+
+    <!-- Story Modal -->
+    <div id="story-modal" class="hidden">
+        <div class="modal-content">
+            <p id="story-message" class="orbitron-body"></p>
+            <button id="close-modal" class="orbitron-body">Close</button>
+        </div>
+    </div>
+
+    <!-- Graph Modal -->
+    <div id="graph-modal" class="hidden">
+        <div class="modal-content">
+            <canvas id="price-graph"></canvas>
+            <button id="close-graph-modal" class="orbitron-body">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
