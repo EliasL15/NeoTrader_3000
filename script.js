@@ -662,3 +662,37 @@ function sellAllAsset(symbol) {
     alert('You do not have any shares to sell.');
   }
 }
+
+function endGame() {
+  clearInterval(priceUpdateInterval);
+  clearInterval(marketEventInterval);
+  clearInterval(newStockInterval);
+
+  // Disable buy buttons
+  const buyButtons = document.querySelectorAll('#market-table button');
+  buyButtons.forEach(button => button.disabled = true);
+
+  // Disable sell buttons
+  const sellButtons = document.querySelectorAll('#portfolio-table button');
+  sellButtons.forEach(button => button.disabled = true);
+
+  const netWorth = balance + getTotalPortfolioValue();
+
+  let endingMessage = '';
+  if (netWorth >= 15000) {
+    endingMessage = `Outstanding performance! Your net worth is $${netWorth.toFixed(2)}. You've mastered the market!`;
+  } else if (netWorth >= 10000) {
+    endingMessage = `Good job! Your net worth is $${netWorth.toFixed(2)}. You've made a profit.`;
+  } else if (netWorth >= 8000) {
+    endingMessage = `Not bad. Your net worth is $${netWorth.toFixed(2)}. You've weathered the market's ups and downs.`;
+  } else {
+    endingMessage = `Ouch! Your net worth is $${netWorth.toFixed(2)}. Better luck next time.`;
+  }
+
+  showStoryMessage(endingMessage);
+
+  // Redirect to thank you page after a short delay
+  setTimeout(() => {
+    window.location.href = 'thankyou.html';
+  }, 5000); // 5 seconds delay
+}
