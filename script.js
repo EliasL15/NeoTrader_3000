@@ -3,7 +3,7 @@ let balance = 10000;
 let portfolio = {};
 let assets = [];
 let selectedAsset = null;
-let gameDuration = 5 * 60 * 1000; // 5 minutes
+let gameDuration = 3 * 60 * 1000; // 5 minutes
 let gameTimer;
 let priceUpdateInterval;
 let marketEventInterval;
@@ -13,7 +13,7 @@ let priceHistory = {}; // For recording price history
 let chartUpdateInterval;
 let selectedSymbolForChart = null;
 
-// Arrays for messages and insider info
+// Arrays for messages and Marker roumors
 const purchaseMessages = [
   "A shadowy figure nods approvingly as you invest.",
   "Your holo-screen flickers as you confirm the purchase.",
@@ -336,7 +336,7 @@ function triggerMarketEvents() {
       updatePortfolioTable();
       updatePortfolioValue();
     } else if (eventChance > 0.3) {
-      // Provide insider information
+      // Provide rumours
       provideInsiderInformation();
     }
   }, 20000);
@@ -373,10 +373,10 @@ function introduceNewStock() {
   priceHistory[newStock.symbol] = [newStock.price];
 }
 
-// Provide Insider Information
+// Provide Rumors Information
 function provideInsiderInformation() {
   const info = insiderInfoMessages[Math.floor(Math.random() * insiderInfoMessages.length)];
-  showStoryMessage(`Insider Info: ${info.message}`);
+  showStoryMessage(`Market Rumors: ${info.message}`);
 
   const isAccurate = Math.random() > 0.1; // 90% chance to be accurate
   setTimeout(() => {
@@ -395,7 +395,7 @@ function provideInsiderInformation() {
         } else {
           asset.price *= 1.2;
         }
-        showStoryMessage(`Unexpected turn of events for ${asset.name}! The insider info was misleading.`);
+        showStoryMessage(`Unexpected turn of events for ${asset.name}! Market Rumors was misleading.`);
       }
 
       // Record the new price
